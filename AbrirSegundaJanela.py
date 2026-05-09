@@ -1,5 +1,5 @@
 '''import tkinter as tk
-#teste de alteracao
+#teste de alteracao 2
 janela = tk.Tk()
 
 janela.title("Página Principal")
