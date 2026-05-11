@@ -27,7 +27,7 @@ def abrir_segunda_janela():
     segunda_janela.config(bg='pink')
 
     #tamanho da janela
-    largura_janela = 300
+    largura_janela = 500
     altura_janela = 200
 
     #obter dimensoes da tela do monitor
