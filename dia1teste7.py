@@ -4,4 +4,4 @@ if (idade >= 18 and cnh=="sim"):
     print("pode dirigir")
 else:
     print("Nao pode dirigir") 
-    print('nao sei')
+    #print('nao sei')
