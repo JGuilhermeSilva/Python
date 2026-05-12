@@ -11,7 +11,11 @@ print(compras)
 #compras.sort(reverse=True)
 #print(compras)
 
+#print(f"Feijao aparece {compras.count("Feijao")} vezes na lista") #lista.count
 
 
+lista2 = compras.copy()
+
+print(lista2)
 '''for c, v in enumerate(compras):
     print(f"encontrei na posicao {c} o valor de {v}")'''
