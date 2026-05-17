@@ -31,22 +31,24 @@ pausado = False
 def pauseUnpause():
     global pausado
     
-    if not pausado:
-        pygame.mixer.music.pause()
+    if not pausado: #se pausado(False)==False-->True, então:
+        pygame.mixer.music.pause() #pausa a musica
         rotulo_status.config(text="Música pausada")
 
         #verifica se a musica está pausada e muda imagem para que o usuario dê play novamente
         botaoPlayAndPause.config(image=imageContinuar)
-        pausado = True
+        pausado = True #diz que pausado é True--> retorna: se o usuario pausou a musica
+        #o icone do do botao deve ser o de continuar
         
     else:
-        pygame.mixer.music.unpause()
+        pygame.mixer.music.unpause() #despausa a musica
         rotulo_status.config(text=f"Continuando: {playlist[indice]}")
         botaoPlayAndPause.config(text="Pausar ||")
         #verifica se a musica está tocando e muda imagem
         botaoPlayAndPause.config(image=imagePause)
         
-        pausado = False
+        pausado = False#diz que pausado é False--> retorna: se a musica está tocando
+        #o icone do do botao deve ser o de pausar
 
         
 '''#pausar musica
@@ -115,7 +117,7 @@ botaoAdiantar = tk.Button(janela, text="Pular musica", image=imageProximo, comma
 botaoAdiantar.pack(side='left', padx=5)
 
 def abrir_site():
-    '''pygame.mixer.music.load("musicas/interferencia.mp3")
+    '''pygame.mixer.music.load("interferencia.mp3")
     pygame.mixer.music.play()'''
     webbrowser.open_new_tab("https://radiosaovivo.net/cenecista-picui/")
     rotulo_status.config(text="Tocando FM de Picuí - ao vivo")
