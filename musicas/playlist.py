@@ -82,7 +82,7 @@ def prev_music():
 #Iniciando interface grafica
 janela = tk.Tk()
 janela.title("Tocador de musica")
-janela.geometry("700x200")
+janela.geometry("900x700")
 radio_fundo = tk.PhotoImage(file="musicas/radio_fundo.png").subsample(2,2)
 label_fundo = tk.Label(janela, image=radio_fundo)
 label_fundo.place(x=0, y=0, relwidth=1, relheight=1)
@@ -127,7 +127,7 @@ botaoFM = tk.Button(janela, text="FM", image=imageFM ,command=abrir_site)
 botaoFM.pack(side='left', padx=5)
 
 #Rotulo para mostrar o status da musica
-rotulo_status = tk.Label(janela, text="Nenhuma musica tocando", font=('Arial', 12))
+rotulo_status = tk.Label(janela, text="Nenhuma musica tocando",bg="green",  font=('Arial', 12))
 rotulo_status.pack(side='left')
 
 #play_music()
