@@ -23,7 +23,7 @@ titulo = customtkinter.CTkLabel(janela, text="Tela de Login:").pack()
 campoEntradaEmail = customtkinter.CTkEntry(janela, placeholder_text="Email")
 campoEntradaEmail.pack(padx=10, pady=10)
 
-campoEntradaSenha = customtkinter.CTkEntry(janela, placeholder_text="Senha" ,show="*")
+campoEntradaSenha = customtkinter.CTkEntry(janela, placeholder_text="Senha", show="*")
 campoEntradaSenha.pack(padx=10, pady=10)
 
 janela.bind('<Return>', clique)
