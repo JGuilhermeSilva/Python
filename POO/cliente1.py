@@ -65,6 +65,8 @@ class cliente:
                 "valorPedido": self.valorPedido,
                 "formaPagamento": self.formaPagamento
             })
+            
+            
         for linha, coluna in self.lista.items():
             print(f"{linha} : {coluna}")
 
