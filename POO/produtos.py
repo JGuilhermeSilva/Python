@@ -12,7 +12,7 @@ class Produto:
         self.preco -= self.preco*0.10
 
 
-produto1 = Produto('Feijao', 8, 5, 'Carioca', 'Cereais')
+produto1 = Produto(8, 5, 'Carioca', 'Cereais')
 produto1.aplicarDesconto()
 
 print(f"Produto: {produto1.nome}, Preço final: R${produto1.preco:.2f}")
