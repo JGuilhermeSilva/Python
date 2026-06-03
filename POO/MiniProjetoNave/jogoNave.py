@@ -6,11 +6,20 @@ import sys
 #inicializar o pygame
 pygame.init()
 
+
 #definir tamanho da tela
 largura = 600
 altura = 400
 tela = pygame.display.set_mode((largura, altura))
 pygame.display.set_caption("Jogo da Nave")
+
+# --- NOVO: Carregar e redimensionar a imagem da nave ---
+# Certifique-se de que o arquivo "nave.png" está na mesma pasta deste script!
+imagem_nave = pygame.image.load("POO/MiniProjetoNave/navezinha.png").convert_alpha()
+imagem_nave = pygame.transform.scale(imagem_nave, (40, 20))
+
+som_tiro = pygame.mixer.Sound('POO/MiniProjetoNave/som_tiro.mp3')
+som_tiro.set_volume(0.3)
 
 #definir as cores
 BRANCO = (255, 255, 255)
@@ -31,7 +40,10 @@ class Nave:
     
     def desenhar(self):
         #desenhar nave com um retangulo azul
-        pygame.draw.rect(tela, AZUL, (self.x, self.y, 40, 20))
+        #pygame.draw.rect(tela, AZUL, (self.x, self.y, 40, 20))
+
+         # --- ALTERADO: Desenha a imagem PNG no lugar do retângulo azul ---
+        tela.blit(imagem_nave, (self.x, self.y))
 
     def mover(self, teclas):
         #mover para a esquerda se a seta esquerda for pressionada
@@ -94,6 +106,8 @@ def jogo():
             if evento.type == pygame.KEYDOWN:
                 if evento.key == pygame.K_SPACE:
                     tiros.append(Tiro(nave.x, nave.y))
+                    #adiciona som de tiro ao aperta a tecla SPACE
+                    som_tiro.play()
         
         #captura teclas pressionadas
         teclas = pygame.key.get_pressed()
