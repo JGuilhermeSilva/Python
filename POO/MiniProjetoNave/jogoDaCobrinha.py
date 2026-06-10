@@ -43,10 +43,14 @@ def jogo():
     # corpo da cobra ( lista de blocos)
     cobra = []
     comprimento_cobra = 1
-
+########################################################
+#verificar round ou random
     # posiçao inicial da comida da cobrinha(aleatorio)
     comida_x = round(round.randrange(0, largura - tamanho_bloco)/20.0) * 20.0
     comida_y = round(round.randrange(0, altura - tamanho_bloco)/20.0) * 20.0
+#verificar round ou random    
+########################################################
+
 
     # pontuaçao inicial
     pontos = 0
