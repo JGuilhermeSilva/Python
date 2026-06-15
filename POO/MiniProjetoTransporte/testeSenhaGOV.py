@@ -7,7 +7,7 @@ for n in nome:
     if n.lower() == 'o':
         nomeFinal = nomeFinal.replace('o', '0')
     if n.lower() == 'e':
-        nomeFinal = nomeFinal.replace('e', '3', 0)
+        nomeFinal = nomeFinal.replace('e', '3')
     
 #muda a primeira letra do nome para maiusculo
 if nomeFinal[0] != '@' or nomeFinal[0] != '0' or nomeFinal[0] != '3':
