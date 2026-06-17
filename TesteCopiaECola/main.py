@@ -20,16 +20,20 @@ try:
         # Pausa de 0.1 segundos para não sobrecarregar o processador
         time.sleep(0.1)
         #ao colocar o mouse em cma do x de fechar a aba clica
-        if x>=1320 and x<=1365 and y>=2 and y<=372:
+        '''if x>=1320 and x<=1365 and y>=2 and y<=372:
             pyautogui.click(x=1335,y=28, clicks=1)
-            #1324,1365
+            #1324,1365'''
         if x>=432 and x<=500 and y>=517 and y<=547:
             pyautogui.click(x=673, y=394, clicks=1)
+            time.sleep(1)
             pyautogui.hotkey('ctrl', 'a')
+            time.sleep(1)
             pyautogui.hotkey('ctrl', 'c')
             texto_copiado = pyperclip.paste()
             pyautogui.hotkey('win', 'r')
+            time.sleep(1)
             pyautogui.write('notepad')
+            time.sleep(1)
             pyautogui.hotkey('enter')
             time.sleep(1)
             #pyautogui.write(texto_copiado)
