@@ -1,0 +1,176 @@
+Control Identifiers:
+
+Dialog - ' Sem título - Bloco de notas'    (L133, T43, R1158, B598)
+[' Sem título - Bloco de notas', 'Dialog', ' Sem título - Bloco de notasDialog', 'Dialog0', 'Dialog1']
+child_window(title=" Sem título - Bloco de notas", control_type="Window")
+   | 
+   | Pane - ''    (L139, T118, R1152, B560)
+   | ['Pane', 'Sem títuloPane', 'Pane0', 'Pane1', 'Sem títuloPane0', 'Sem títuloPane1']
+   |    | 
+   |    | Document - ''    (L139, T118, R1152, B560)
+   |    | ['Document', 'Sem títuloDocument']
+   | 
+   | Pane - ''    (L179, T53, R466, B85)
+   | ['Pane2', 'Sem títuloPane2']
+   |    | 
+   |    | Pane - ''    (L179, T53, R466, B85)
+   |    | ['Pane3', 'Sem títuloPane3']
+   |    |    | 
+   |    |    | TabControl - ''    (L179, T53, R466, B85)
+   |    |    | ['Sem títuloTabControl', 'TabControlAdicionar Nova Guia', 'TabControl']
+   |    |    | child_window(auto_id="Tabs", control_type="Tab")
+   |    |    |    | 
+   |    |    |    | ListBox - ''    (L181, T53, R429, B85)
+   |    |    |    | ['ListBox', 'Sem títuloListBox']
+   |    |    |    | child_window(auto_id="TabListView", control_type="List")
+   |    |    |    |    | 
+   |    |    |    |    | TabItem - 'Sem título. Não modificado.'    (L183, T53, R429, B85)
+   |    |    |    |    | ['TabItem', 'Sem título. Não modificado.', 'Sem título. Não modificado.TabItem']
+   |    |    |    |    | child_window(title="Sem título. Não modificado.", control_type="TabItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | Static - 'Sem título'    (L196, T61, R253, B76)
+   |    |    |    |    |    | ['Static', 'Sem título', 'Sem títuloStatic', 'Static0', 'Static1']
+   |    |    |    |    |    | child_window(title="Sem título", control_type="Text")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | Button - 'Fechar Guia'    (L388, T57, R420, B81)
+   |    |    |    |    |    | ['Button', 'Fechar Guia', 'Fechar GuiaButton', 'Button0', 'Button1']
+   |    |    |    |    |    | child_window(title="Fechar Guia", auto_id="CloseButton", control_type="Button")
+   |    |    |    | 
+   |    |    |    | Button - 'Adicionar Nova Guia'    (L432, T58, R464, B82)
+   |    |    |    | ['Adicionar Nova GuiaButton', 'Button2', 'Adicionar Nova Guia']
+   |    |    |    | child_window(title="Adicionar Nova Guia", auto_id="AddButton", control_type="Button")
+   | 
+   | Pane - ''    (L139, T85, R1152, B118)
+   | ['Pane4', 'Sem títuloPane4']
+   |    | 
+   |    | Pane - ''    (L139, T85, R1152, B118)
+   |    | ['Pane5', 'Sem títuloPane5']
+   |    |    | 
+   |    |    | Menu - ''    (L139, T85, R342, B117)
+   |    |    | ['Menu', 'Sem títuloMenu', 'Menu0', 'Menu1']
+   |    |    | child_window(auto_id="MenuBar", control_type="MenuBar")
+   |    |    |    | 
+   |    |    |    | MenuItem - 'Arquivo'    (L143, T85, R212, B117)
+   |    |    |    | ['Arquivo', 'MenuItem', 'ArquivoMenuItem', 'MenuItem0', 'MenuItem1']
+   |    |    |    | child_window(title="Arquivo", auto_id="File", control_type="MenuItem")
+   |    |    |    | 
+   |    |    |    | MenuItem - 'Editar'    (L220, T85, R276, B117)
+   |    |    |    | ['EditarMenuItem', 'MenuItem2', 'Editar']
+   |    |    |    | child_window(title="Editar", auto_id="Edit", control_type="MenuItem")
+   |    |    |    | 
+   |    |    |    | MenuItem - 'Exibir'    (L284, T85, R338, B117)
+   |    |    |    | ['Exibir', 'ExibirMenuItem', 'MenuItem3']
+   |    |    |    | child_window(title="Exibir", auto_id="View", control_type="MenuItem")
+   |    |    | 
+   |    |    | Button - 'Cabeçalhos'    (L482, T85, R538, B117)
+   |    |    | ['Button3', 'Cabeçalhos', 'CabeçalhosButton']
+   |    |    | child_window(title="Cabeçalhos", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Listas'    (L538, T85, R594, B117)
+   |    |    | ['ListasButton', 'Button4', 'Listas']
+   |    |    | child_window(title="Listas", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Negrito (Ctrl+B)'    (L594, T85, R626, B117)
+   |    |    | ['Negrito (Ctrl+B)Button', 'Button5', 'Negrito (Ctrl+B)']
+   |    |    | child_window(title="Negrito (Ctrl+B)", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Itálico (Ctrl+I)'    (L626, T85, R658, B117)
+   |    |    | ['Itálico (Ctrl+I)Button', 'Button6', 'Itálico (Ctrl+I)']
+   |    |    | child_window(title="Itálico (Ctrl+I)", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Tachado (Ctrl+Shift+X)'    (L658, T85, R690, B117)
+   |    |    | ['Button7', 'Tachado (Ctrl+Shift+X)', 'Tachado (Ctrl+Shift+X)Button']
+   |    |    | child_window(title="Tachado (Ctrl+Shift+X)", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Link (Ctrl+K)'    (L690, T85, R722, B117)
+   |    |    | ['Button8', 'Link (Ctrl+K)', 'Link (Ctrl+K)Button']
+   |    |    | child_window(title="Link (Ctrl+K)", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Tabela'    (L722, T85, R778, B117)
+   |    |    | ['Button9', 'TabelaButton', 'Tabela']
+   |    |    | child_window(title="Tabela", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Limpar formatação (Ctrl+Espaço)'    (L778, T85, R810, B117)
+   |    |    | ['Button10', 'Limpar formatação (Ctrl+Espaço)', 'Limpar formatação (Ctrl+Espaço)Button']
+   |    |    | child_window(title="Limpar formatação (Ctrl+Espaço)", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Ferramentas de escrita'    (L986, T85, R1042, B117)
+   |    |    | ['Button11', 'Ferramentas de\xa0escritaButton', 'Ferramentas de\xa0escrita']
+   |    |    | child_window(title="Ferramentas de escrita", auto_id="RewriteDropDownButton", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Novidades'    (L1046, T86, R1076, B116)
+   |    |    | ['NovidadesButton', 'Button12', 'Novidades']
+   |    |    | child_window(title="Novidades", auto_id="FREButton", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Avatar do usuário'    (L1080, T85, R1110, B117)
+   |    |    | ['Button13', 'Avatar do usuário', 'Avatar do usuárioButton']
+   |    |    | child_window(title="Avatar do usuário", auto_id="AvatarButton", control_type="Button")
+   |    |    | 
+   |    |    | Button - 'Configurações'    (L1114, T85, R1144, B117)
+   |    |    | ['Button14', 'Configurações', 'ConfiguraçõesButton']
+   |    |    | child_window(title="Configurações", auto_id="SettingsButton", control_type="Button")
+   |    |    | 
+   |    |    | Dialog - ''    (L0, T0, R0, B0)
+   |    |    | ['Dialog2']
+   |    |    | child_window(auto_id="PrivacyTeachingTip", control_type="Window")
+   |    |    | 
+   |    |    | Pane - ''    (L0, T0, R0, B0)
+   |    |    | ['Pane6']
+   |    |    | child_window(auto_id="PsDownloadDetailTeachingTip", control_type="Pane")
+   |    |    | 
+   |    |    | Pane - 'O download do modelo de IA local deve ser concluído para usar este recurso enquanto estiver desconectado.'    (L0, T0, R0, B0)
+   |    |    | ['Pane7', 'O download do modelo de\xa0IA local deve ser concluído para usar este recurso enquanto estiver desconectado.Pane', 'O download do modelo de\xa0IA local deve ser concluído para usar este recurso enquanto estiver desconectado.']
+   |    |    | child_window(title="O download do modelo de IA local deve ser concluído para usar este recurso enquanto estiver desconectado.", auto_id="PsDownloadLightTeachingTip", control_type="Pane")
+   | 
+   | Pane - ''    (L139, T560, R1152, B592)
+   | ['Pane8', '  Ln 1, Col 1Pane', '  Ln 1, Col 1Pane0', '  Ln 1, Col 1Pane1']
+   |    | 
+   |    | Pane - ''    (L139, T560, R1152, B592)
+   |    | ['Pane9', '  Ln 1, Col 1Pane2']
+   |    |    | 
+   |    |    | Static - '  Ln 1, Col 1'    (L155, T568, R214, B584)
+   |    |    | ['Static2', '  Ln 1, Col 1Static', '  Ln 1, Col 1']
+   |    |    | child_window(title="  Ln 1, Col 1", auto_id="ContentTextBlock", control_type="Text")
+   |    |    | 
+   |    |    | Static - '0 caractere'    (L244, T568, R304, B584)
+   |    |    | ['Static3', '0 caractereStatic', '0 caractere']
+   |    |    | child_window(title="0 caractere", auto_id="ContentTextBlock", control_type="Text")
+   |    |    | 
+   |    |    | Static - 'Texto sem formatação'    (L446, T560, R578, B592)
+   |    |    | ['Static4', 'Texto sem formataçãoStatic', 'Texto sem formatação']
+   |    |    | child_window(title="Texto sem formatação", auto_id="ContentTextBlock", control_type="Text")
+   |    |    | 
+   |    |    | Static - ' 100%'    (L781, T568, R813, B584)
+   |    |    | ['Static5', ' 100%Static', ' 100%']
+   |    |    | child_window(title=" 100%", auto_id="ContentTextBlock", control_type="Text")
+   |    |    | 
+   |    |    | Static - ' Windows (CRLF)'    (L849, T568, R940, B584)
+   |    |    | [' Windows (CRLF)', 'Static6', ' Windows (CRLF)Static']
+   |    |    | child_window(title=" Windows (CRLF)", auto_id="ContentTextBlock", control_type="Text")
+   |    |    | 
+   |    |    | Static - ' UTF-8'    (L1017, T568, R1053, B584)
+   |    |    | [' UTF-8', 'Static7', ' UTF-8Static']
+   |    |    | child_window(title=" UTF-8", auto_id="ContentTextBlock", control_type="Text")
+   | 
+   | TitleBar - ''    (L0, T0, R0, B0)
+   | ['TitleBar']
+   |    | 
+   |    | Menu - 'Sistema'    (L141, T51, R163, B73)
+   |    | ['Menu2', 'Sistema', 'SistemaMenu', 'Sistema0', 'Sistema1']
+   |    | child_window(title="Sistema", auto_id="MenuBar", control_type="MenuBar")
+   |    |    | 
+   |    |    | MenuItem - 'Sistema'    (L141, T51, R163, B73)
+   |    |    | ['SistemaMenuItem', 'Sistema2', 'MenuItem4']
+   |    |    | child_window(title="Sistema", control_type="MenuItem")
+   |    | 
+   |    | Button - 'Minimizar'    (L1013, T44, R1060, B74)
+   |    | ['Minimizar', 'Button15', 'MinimizarButton']
+   |    | child_window(title="Minimizar", control_type="Button")
+   |    | 
+   |    | Button - 'Maximizar'    (L1060, T44, R1106, B74)
+   |    | ['Button16', 'MaximizarButton', 'Maximizar']
+   |    | child_window(title="Maximizar", control_type="Button")
+   |    | 
+   |    | Button - 'Fechar'    (L1106, T44, R1153, B74)
+   |    | ['Button17', 'FecharButton', 'Fechar']
+   |    | child_window(title="Fechar", control_type="Button")

@@ -1,0 +1,9 @@
+Control Identifiers:
+
+Dialog - 'MPos | X: 890 Y: 408'    (L101, T104, R321, B293)
+['MPos | X: 890 Y: 408Dialog', 'Dialog', 'MPos | X: 890 Y: 408']
+child_window(title="MPos | X: 890 Y: 408", auto_id="MainForm", control_type="Window")
+   | 
+   | Pane - ''    (L101, T104, R321, B293)
+   | ['Pane']
+   | child_window(auto_id="panDraw", control_type="Pane")
