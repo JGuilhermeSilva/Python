@@ -1,0 +1,70 @@
+#DB supermercado
+
+'''
+USE supermercado;
+
+CREATE TABLE Produtos(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    categoria VARCHAR(50),
+    preco DECIMAL(6, 2),
+    estoque INT
+);
+
+-- INSERINDO 10 PRODUTOS FICTICIOS
+INSERT INTO Produtos(nome, categoria, preco, estoque) VALUES
+('arroz 5kg', 'alimento', 25.90, 100),
+('feijao 1kg', 'alimento', 8.50, 80),
+('macarrao 500g', 'alimento', 4.20, 120),
+('leite 1L', 'bebida', 5.00, 200),
+('refrigerante 2L', 'bebida', 7.50, 150),
+('sabonete', 'higiene', 2.30, 300),
+('shampoo 400ml', 'higiene', 15.90, 90),
+('detergente 500ml', 'limpeza', 3.10, 250),
+('papel higienico 12un', 'higiene', 18.00, 70),
+('oleo de soja 900ml', 'alimento', 6.40, 110);
+
+-- ordenar produto do mais barato ao mais caro(ASC do menor pro maior e DESC do maior pro menor)
+select nome, preco from Produtos ORDER BY preco ASC;
+
+-- calcular o valor total em estoque (preco x quantidade)
+SELECT SUM(preco * estoque) AS valor_total_estoque FROM Produtos;
+
+-- calcular quantos produtos sao da categoria higiene
+SELECT COUNT(*) AS total_higiene FROM Produtos WHERE categoria='higiene';
+
+
+SELECT nome, estoque FROM Produtos WHERE estoque < 100;
+
+Select nome, preco from Produtos where categoria='alimento';
+
+select categoria from Produtos;
+'''
+################################################
+
+#DB empresa
+-- novo eschema chamado  empresa
+USE empresa;
+
+-- criando a nossa tabela
+CREATE TABLE Clientes(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    idade INT,
+    email VARCHAR(100),
+    cidade VARCHAR(50)
+);
+
+-- inserindo os nossos clientes na tabela
+INSERT INTO Clientes (nome, idade, email, cidade) VALUES
+('Ana Silva', 25, 'ana.silva@email.com', 'São Paulo'),
+('Carlos Souza', 32, 'carlos.souza@email.com', 'Rio de Janeiro'),
+('Mariana Costa', 28, 'mariana.costa@email.com', 'Belo Horizonte'),
+('Pedro Lima', 40, 'pedro.lima@email.com', 'Curitiba'),
+('Fernanda Alves', 22, 'fernanda.alves@email.com', 'Recife'),
+('João Mendes', 35, 'joao.mendes@email.com', 'Fortaleza'),
+('Paula Rocha', 27, 'paula.rocha@email.com', 'Salvador'),
+('Diego Martins', 30, 'diego.martins@email.com', 'Brasília'),
+('Sofia Pereira', 24, 'sofia.pereira@email.com', 'Manaus'),
+('Lucas Fernandes', 29, 'lucas.fernandes@email.com', 'Porto Alegre'),
+('Juliana Ribeiro'),
