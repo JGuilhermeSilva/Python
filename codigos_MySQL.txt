@@ -67,4 +67,41 @@ INSERT INTO Clientes (nome, idade, email, cidade) VALUES
 ('Diego Martins', 30, 'diego.martins@email.com', 'Brasília'),
 ('Sofia Pereira', 24, 'sofia.pereira@email.com', 'Manaus'),
 ('Lucas Fernandes', 29, 'lucas.fernandes@email.com', 'Porto Alegre'),
-('Juliana Ribeiro'),
+('Juliana Ribeiro', 33, 'juliana.ribeiro@email.com', 'Natal'),
+('Ricardo Gomes', 38, 'ricardo.gomes@email.com', 'Belém'),
+('Camila Duarte', 26, 'camila.duarte@email.com', 'Florianópolis'),
+('Felipe Araújo', 31, 'felipe.araujo@email.com', 'João Pessoa'),
+('Isabela Nunes', 23, 'isabela.nunes@email.com', 'Maceió'),
+('Thiago Barros', 36, 'tiago.barros@email.com', 'Campo Grande'),
+('Larissa Monteiro', 28, 'larissa.monteiro@email.com', 'Vitória'),
+('Mateus Carvalho', 34, 'mateus.carvalho@email.com', 'São Luis'),
+('Beatriz Santos', 21, 'beatriz.santos@email.com', 'Teresina'),
+('André Oliveira', 39, 'andre.oliveira@email.com', 'Goiânia'),
+('Patrícia Ramos', 27, 'patricia.ramos@email.com', 'Cuiabá'),
+('Gabriel Batista', 29, 'gabriel.batista@email.com', 'Aracajú'),
+('Renata Figueiredo', 32, 'renata.figueiredo@email.com', 'Macapá'),
+('Eduardo Teixeira', 37, 'eduardo.texeira@email.com', 'Palmas'),
+('Clara Moreira', 25, 'clara.moreira@email.com', 'Rio Branco');
+
+
+select nome, idade from Clientes order by idade asc;
+
+select sum(idade) as soma_idade from Clientes;
+
+select count(nome) as nomes_com_p from CLientes where nome like '%p%';
+
+select nome, idade from Clientes where idade >= 30;
+
+select count(nome) as total_sp from CLientes where cidade='São Paulo';
+
+select nome, cidade from Clientes;
+
+
+update Clientes set cidade='Recife' where nome='Ana Silva';
+
+delete from Clientes where id=26;
+select * from Clientes;
+INSERT INTO Clientes (nome, idade, email, cidade) VALUES
+('Jose Guilherme', 23, 'guilherme.silva@email.com', 'Frei Martinho');
+
+select * from Clientes where nome = 'Jose Guilherme';
