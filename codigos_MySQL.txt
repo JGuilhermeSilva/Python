@@ -105,3 +105,34 @@ INSERT INTO Clientes (nome, idade, email, cidade) VALUES
 ('Jose Guilherme', 23, 'guilherme.silva@email.com', 'Frei Martinho');
 
 select * from Clientes where nome = 'Jose Guilherme';
+
+###############################################################################
+#DB copa2026
+-- novo eschema chamado copa2026
+USE copa2026;
+
+-- Tabela de Seleções
+CREATE TABLE Selecoes(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome varchar(50),
+    continente varchar(30)    
+);
+
+-- Tabela dos jogadores
+CREATE TABLE Jogadores(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome varchar(50),
+    idade int,
+    posicao varchar(30),
+    selecao_id int,
+    foreign key (selecao_id) references selecoes(id)
+);
+
+CREATE TABLE Estadios(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome varchar(50),
+    cidade varchar(50),
+    capacidade int
+);
+
+
