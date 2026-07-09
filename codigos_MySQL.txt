@@ -204,6 +204,7 @@ join Estadios e on p.estadio_id = e.id;
 ####################################################################################
 
 -- novo esquema
+-- novo esquema
 USE lanchonete;
 
 create table Produtos(
@@ -269,3 +270,7 @@ select * from Pedidos;
 
 select * from ItensPedido;
 
+select c.nome as cliente, prod.nome as itens_produtos, p.data from Pedidos p
+join Clientes c on p.cliente_id = c.id
+join ItensPedido i on p.id = i.pedido_id
+JOIN Produtos prod ON i.produto_id = prod.id;
