@@ -262,15 +262,77 @@ insert into ItensPedido(pedido_id, produto_id, quantidade) values
 (2, 3, 1);
 
 
-select * from Produtos;
-
 select * from Clientes;
 
 select * from Pedidos;
 
 select * from ItensPedido;
 
+-- ver todos os produtos
+select * from Produtos order by preco asc;
+
+-- ver pedidos com clientes
+select p.id, c.nome, p.data from Pedidos p
+join Clientes c on p.cliente_id = c.id;
+
+-- itens de um pedido
+select i.quantidade, pr.nome, pr.preco from ItensPedido i
+join Produtos pr on i.produto_id = pr.id where i.pedido_id = 1;
+
+-- calcular valor total de um pedido
+select sum(i.quantidade * pr.preco) as valor_total from ItensPedido i
+join Produtos pr on i.produto_id = pr.id where i.pedido_id = 1;
+
+
+-- mostra o cliente, o pedido dele e a data do pedido
 select c.nome as cliente, prod.nome as itens_produtos, p.data from Pedidos p
 join Clientes c on p.cliente_id = c.id
 join ItensPedido i on p.id = i.pedido_id
-JOIN Produtos prod ON i.produto_id = prod.id;
+JOIN Produtos prod ON i.produto_id = prod.id order by c.id asc;
+
+
+
+
+######################################################################
+-- novo esquema ponto_eletronico
+use ponto_eletronico;
+
+-- criar tabela de funcionarios
+create table Funcionarios(
+	id int auto_increment primary key,
+    nome varchar(50),
+    cargo varchar(30),
+    departamento varchar(30)    
+);
+
+-- cria tabela de registros de ponto
+create table RegistrosPonto(
+	id int auto_increment primary key,
+    funcionario_id int,
+    data Date,
+    hora_entrada Time,
+    hora_saida Time,
+    foreign key (funcionario_id) references Funcionarios(id)
+);
+
+
+-- inserindo fuincionarios ficticios
+insert into Funcionarios(nome, cargo, departamento) values
+('Guilherme', 'Programador', 'Desenvolvimento de Sistemas'),
+('Lindomara', 'Esteticista', 'Beleza'),
+('Renivaldo', 'Engenheiro', 'Infraestrutura'),
+('Delei', 'Médico', 'Departamento de Saúde'),
+('Tiago', 'Analista de Sistemas', 'Departamento de Informática'),
+('Patrício', 'Tesoureiro', 'Departamento de Finanças'),
+('José G', 'Digitador', 'Departamento de Licitação'),
+('Kerven', 'Streaming de Game', 'Departamento de Esporte');
+
+-- inserindo registros de ponto ficticios
+insert into RegistrosPonto(funcionario_id, data, hora_entrada, hora_saida) values
+(1, '2026-07-09', '07:00:00', '13:00:00'),
+(2, '2026-07-09', '08:30:00', '17:00:00'),
+(3, '2026-07-09', '07:00:00', '17:00:00');
+
+select * from Funcionarios;
+
+select * from RegistrosPonto;
