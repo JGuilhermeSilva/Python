@@ -56,15 +56,31 @@ insert into ItensPedido(pedido_id, produto_id, quantidade) values
 (2, 3, 1);
 
 
-select * from Produtos;
-
 select * from Clientes;
 
 select * from Pedidos;
 
 select * from ItensPedido;
 
+-- ver todos os produtos
+select * from Produtos order by preco asc;
+
+-- ver pedidos com clientes
+select p.id, c.nome, p.data from Pedidos p
+join Clientes c on p.cliente_id = c.id;
+
+-- itens de um pedido
+select i.quantidade, pr.nome, pr.preco from ItensPedido i
+join Produtos pr on i.produto_id = pr.id where i.pedido_id = 1;
+
+-- calcular valor total de um pedido
+select sum(i.quantidade * pr.preco) as valor_total from ItensPedido i
+join Produtos pr on i.produto_id = pr.id where i.pedido_id = 1;
+
+
+-- mostra o cliente, o pedido dele e a data do pedido
 select c.nome as cliente, prod.nome as itens_produtos, p.data from Pedidos p
 join Clientes c on p.cliente_id = c.id
 join ItensPedido i on p.id = i.pedido_id
-JOIN Produtos prod ON i.produto_id = prod.id;
+JOIN Produtos prod ON i.produto_id = prod.id order by c.id asc;
+
