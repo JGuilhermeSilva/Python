@@ -40,3 +40,18 @@ select * from Funcionarios;
 
 select * from RegistrosPonto;
 
+-- ver registro de ponto de um funcionario especifico
+select f.nome, r.data, r.hora_entrada, r.hora_saida from RegistrosPonto r
+join Funcionarios f on r.funcionario_id = f.id where f.nome='Guilherme';
+
+-- calcular horas trabalhadas por dia
+select f.nome, r.data, timediff(r.hora_saida, r.hora_entrada) as Horas_Trabalhadas from RegistrosPonto r
+join Funcionarios f on r.funcionario_id = f.id;
+
+-- verificar quantos funcionarios trabalharam mais de 8 horas
+select f.nome, r.data, timediff(r.hora_saida, r.hora_entrada) as Horas_Trabalhadas from RegistrosPonto r
+join Funcionarios f on r.funcionario_id = f.id where timediff(r.hora_saida, r.hora_entrada) > '08:00:00';
+
+-- contar quantos registros de ponto existem no banco
+select count(*) as Total_Registros from RegistrosPonto;
+

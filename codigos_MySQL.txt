@@ -413,3 +413,13 @@ select classificacao, count(*) as total from Triagem group by classificacao;
 select p.nome, t.classificacao, a.medico, a.diagnostico from Atendimentos a
 join Triagem t on a.triagem_id = t.id
 join Pacientes p on t.paciente_id = p.id;
+
+DESCRIBE triagem;
+
+-- informa paciente e que dia foi atendido na triagem
+select CONCAT(p.nome, 'foi atendido em: ',  DAY(t.data),'/', MONTH(t.data),'/', YEAR(t.data))  as data_atendimento from Pacientes p
+join triagem t on t.paciente_id = p.id;
+select * from Pacientes;
+-- informa paciente e sua ficha cadastrada
+select CONCAT('Nome: ', p.nome, '/idade: ', p.idade, '/sexo: ', p.genero, '/cidade:', p.cidade) as ficha_pacientes
+from Pacientes p;
