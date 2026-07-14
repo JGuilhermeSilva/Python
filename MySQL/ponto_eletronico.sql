@@ -39,3 +39,4 @@ insert into RegistrosPonto(funcionario_id, data, hora_entrada, hora_saida) value
 select * from Funcionarios;
 
 select * from RegistrosPonto;
+
