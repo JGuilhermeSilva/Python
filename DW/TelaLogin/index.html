@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+
+        <div id="error-message" class="error"></div>
+    </div>
+ 
+    <!--interacao com javascript-->
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message").value;
+
+            if (username === "" || password === ""){
+                errorMessage.textContent = "Preencha todos os campos";
+                return;
+            }
+            //validação simples: usuario = "aluno" e senha = "12345"
+            if (username === "aluno" && password === "12345"){
+                errorMessage.textContent = "";
+
+                var novaAba = window.open("", "_blank");
+                novaAba.document.write("<h1 style='text-align:center; margin-top:50px;'>Bem vindo!</h1>");
+            }
+
+            else {
+                errorMessage.textContent = "Usuário ou senha incorretos!";
+            }
+        }
+    </script>
+</body>
+</html>
