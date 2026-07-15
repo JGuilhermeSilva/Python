@@ -31,7 +31,7 @@
         function login() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
-            var errorMessage = document.getElementById("error-message").value;
+            var errorMessage = document.getElementById("error-message");
 
             if (username === "" || password === ""){
                 errorMessage.textContent = "Preencha todos os campos";
