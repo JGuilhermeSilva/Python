@@ -35,12 +35,12 @@ function mostrarPaciente (indice){
 mostrarPaciente(indiceAtual);
 
 //funcao que chama o próximo paciente
-function mostrarProximo (){
+function mostrarProximo(){
     indiceAtual++;
     if (indiceAtual >= pacientes.length){
         indiceAtual = 0;
-        mostrarPaciente(indiceAtual);
     }
+    mostrarPaciente(indiceAtual);
 }
 
 //atualizar data e hora no rodapé
