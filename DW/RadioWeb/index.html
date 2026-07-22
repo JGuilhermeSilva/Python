@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Frei Martinho FM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #004080, #00bfff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- container principal da rádio-->
+    <div class="radio">
+        <!-- Titulo da rádio -->
+        <h1>Rádio Frei Martinho FM</h1>
+
+        <audio controls src="musicas/interferencia.mp3" type="audio.mp3">
+            Seu navegador não suporta audio HTML5.
+        </audio>
+
+        <!--criando a nossa playlist-->
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul>
+                <li onclick="tocarMusica(0)" class="active">Música 01</li>
+                <li onclick="tocarMusica(1)" class="active">Música 02</li>
+                <li onclick="tocarMusica(2)" class="active">Música 03</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
