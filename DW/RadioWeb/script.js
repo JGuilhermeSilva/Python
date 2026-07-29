@@ -16,7 +16,7 @@ var modo = "normal";
 
 function tocarMusica(indice){
     indiceAtual = indice;
-    player.scr = musicas[indice];
+    player.src = musicas[indice];
     player.play()
     //atualizar playlist
     var itens = document.querySelectorAll("#lista li");
