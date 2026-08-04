@@ -1,7 +1,7 @@
 var musicas = [
     "playlist/boto_ou_nao.mp3",
     "playlist/JulietaTa.mp3",
-    "VIRA_VIRA.mp3"
+    "VIRAVIRA.mp3"
 ];
 
 var nomes = [
