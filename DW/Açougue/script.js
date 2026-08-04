@@ -87,3 +87,48 @@ function atualizarCarrinho(){
     });
     document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
 } 
+
+//funcao para remover item do carrinho
+function removerItem(index) {
+    total -= carrinho[index].precoTotal;
+    carrinho.splice(index, 1);
+    atualizarCarrinho();
+}
+
+//funcao para finalizar compra
+function finalizarCompra() {
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!")
+        return;
+    }
+
+    //adicionar compra ao historico
+    historico.push({itens: [...carrinho], total});
+
+    //mostrar mensagem de confirmacao
+    alert(`Compra finalizada! Total R$ ${total.toFixed(2)}`);
+
+    //limpar carrinho
+    carrinho = [];
+    total = 0;
+    atualizarCarrinho();
+
+    //atualizar o historico na tela
+    atualizarHistorico();
+}
+
+//funcao para atualizar o historico de vendas
+function atualizarHistorico() {
+    const lista = document.getElementById("lista-historico");
+
+    lista.innerHTML = "";
+    historico.forEach((compra, index) => {
+        const li = document.createElement("li");
+        li.textContent = `Venda ${index + 1}: Total R$ ${compra.total.toFixed(2)} - Itens: ${compra.itens.map(i => ` ${i.qtd}Kg ${i.produto} `).join(", ")}`;
+
+        lista.appendChild(li);
+    })
+}
+
+//inicilaizar com os produtos padrao
+renderizarProdutos();
