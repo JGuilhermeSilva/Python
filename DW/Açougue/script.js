@@ -86,4 +86,4 @@ function atualizarCarrinho(){
         lista.appendChild(li);
     });
     document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
-}
+} 
