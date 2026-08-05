@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    /* Azul escuro hospitalar moderno */
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container do Painel Principal */
+.painel-container {
+    width: 90vw;
+    max-width: 1200px;
+    background-color: #1e293b;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid #334155;
+    transition: all 0.5s ease;
+}
+
+/* Efeito visual quando um novo paciente é chamado */
+.destaque {
+    background-color: #0369a1 !important;
+    /* Pisca em azul brilhante */
+    border-color: #38bdf8 !important;
+    transform: scale(1.03);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.nome-paciente {
+    font-size: 5.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+}
+
+.sala-destino {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #4ade80;
+    /* Verde para destacar o destino */
+    background-color: rgba(74, 222, 128, 0.1);
+    padding: 15px 40px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* Rodapé com relógio e avisos */
+.rodape {
+    margin-top: 50px;
+    width: 90vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
