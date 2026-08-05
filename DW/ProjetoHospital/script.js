@@ -1,7 +1,7 @@
 
 // Configurações básicas da API do Hospital
 const API_URL = 'https://randomuser.me/api/'; // Substitua pela URL real do hospital
-const INTERVALO_ATUALIZACAO = 5000; // Tempo em milissegundos (5 segundos)
+const INTERVALO_ATUALIZACAO = 10000; // Tempo em milissegundos (10 segundos)
 
 let ultimoNomeChamado = "";
 
@@ -68,7 +68,25 @@ async function buscarDadosPainel() {
             document.getElementById('sala').innerText = dados.sala;
 
             // Dispara efeitos
-            //////////////////////////////////////tocarAlertaSonoro();
+            tocarAlertaSonoro();
+
+
+
+
+            //usar a API de sintese de voz no navegador
+            var mensagem = dados.nome + ", dirigir-se ao " + dados.sala;
+            var fala = new SpeechSynthesisUtterance(mensagem);
+            fala.lang = "pt-BR";
+            //aguarda 1 segundo  após o bip antes da fala
+            setTimeout(function() {
+                speechSynthesis.speak(fala);
+            }, 1000);
+
+
+
+
+
+
             const elementoPainel = document.getElementById('painel');
             elementoPainel.classList.add('destaque');
 
